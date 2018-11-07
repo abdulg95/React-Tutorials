@@ -1,0 +1,147 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:18.0pt;
+	font-family:"Arial",sans-serif;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#2F5496;
+	font-weight:normal;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:2.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:22.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#2F5496;
+	font-weight:normal;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+code
+	{font-family:"Courier New";}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Calibri Light",sans-serif;
+	color:#2F5496;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Calibri Light",sans-serif;
+	color:#2F5496;}
+span.black-bold
+	{mso-style-name:black-bold;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-CA link="#0563C1" vlink="#954F72">
+
+<div class=WordSection1>
+
+<h1>Learning React - Tutorial 02(State and Props)</h1>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>In react, state is used to make components more dynamic.
+State and props are two ways react controls data flow of the app. The main
+difference between the two is that state is internal and should be controlled
+by the component itself while props are external and are passed in by what is
+rendering the component.</p>
+
+<p class=MsoNormal>Look closely at the code here and see how props are used in
+react. <a href="https://codepen.io/abdulg95/pen/qQdYPe">https://codepen.io/abdulg95/pen/qQdYPe</a></p>
+
+<p class=MsoNormal>The syntax used here is slightly different from code created
+with <span style='font-family:"Courier New"'>create-react-app </span>but the
+overall logic is till the same</p>
+
+<p class=MsoNormal>Were you able to follow the way data is encapsulated?</p>
+
+<p class=MsoNormal> Now here’s an example of how state is used in react. <a
+href="https://codepen.io/abdulg95/pen/NEqzMo">https://codepen.io/abdulg95/pen/NEqzMo</a>.</p>
+
+<p class=MsoNormal>State is an in built object in react which maps to a key of
+values in the example above our state is used to store a single key called
+count which is used to keep track of button clicks. To access the now defined
+state we use <span style='font-family:"Courier New"'>this.state .</span></p>
+
+<p class=MsoNormal>To make changes to the state, call <span style='font-family:
+"Courier New"'>this.setState</span> passing in an object map of keys to updated
+values. It is important to notice that when ever <span style='font-family:"Courier New"'>this.setState</span>
+is called react re-renders the page , this is why multiple stateful components
+are usually frowned upon as this often leads to chaos.</p>
+
+<h2>Problem:</h2>
+
+<p class=MsoNormal>Using the earlier example as a guide. Make a react app that
+displays a card along with a button. Use this button as a toggle to cycle
+through a finite list of colors so every time your button is clicked the card
+changes color</p>
+
+<h2>Restrictions:</h2>
+
+<p class=MsoNormal>Make a container that stores the current index of colors in
+its state. Make sure to use this index from state as a prop passed to your card
+component. Perform the logic to transform this index into a color in your card
+component  and style accordingly with css.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
