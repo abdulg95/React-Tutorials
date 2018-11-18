@@ -1,0 +1,347 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:18.0pt;
+	font-family:"Arial",sans-serif;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#2F5496;
+	font-weight:normal;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:2.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:18.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#2F5496;
+	font-weight:normal;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-top:2.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:18.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#2F5496;
+	font-weight:normal;
+	font-style:italic;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+code
+	{font-family:"Courier New";}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Calibri Light",sans-serif;
+	color:#2F5496;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Calibri Light",sans-serif;
+	color:#2F5496;}
+span.token
+	{mso-style-name:token;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Calibri Light",sans-serif;
+	color:#2F5496;
+	font-style:italic;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-CA link="#0563C1" vlink="#954F72">
+
+<div class=WordSection1>
+
+<h1>Learning React - Tutorial 04(Component Lifecycle)</h1>
+
+<p class=MsoNormal>For further reference, look here <a
+href="https://reactjs.org/docs/react-component.html">https://reactjs.org/docs/react-component.html</a></p>
+
+<p class=MsoNormal>ReactJS Component Lifecycle methods are hooks which can be
+used to augment the behaviour of your web app, with custom callbacks. The
+component lifecycle is divided into three parts namely, <b>Mounting, Updating,
+and Unmounting</b>. In this tutorial, we'll use <b>ES6</b> syntax. These lifecycle
+hooks are very powerful as they can be used to optimize your web app and make them
+run a lot faster without unnecessary re-renders.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2>Mounting</h2>
+
+<p class=MsoNormal>Mounting is the first part of react lifecycle execution available
+when a component is created, apart from the constructor where initialization is
+done, the mounting methods are componentWillMount, render, and componentDidMount
+methods which are invoked automatically in first render. </p>
+
+<p class=MsoNormal>Here’s an example of initialization in the constructor.</p>
+
+<p class=MsoNormal><span style='font-size:11.0pt;line-height:107%;font-family:
+"Courier New"'>class<span style='background:#F7F7F7'> LifeCycle</span>Example<span
+style='background:#F7F7F7'> </span>extends<span style='background:#F7F7F7'> </span>React.Component<span
+style='background:#F7F7F7'> </span>{</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span style='font-size:11.0pt;
+line-height:107%;font-family:"Courier New"'>constructor(<span style='background:
+#F7F7F7'>props</span>)<span style='background:#F7F7F7'> </span>{</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span style='font-size:11.0pt;
+line-height:107%;font-family:"Courier New"'>super(<span style='background:#F7F7F7'>props</span>);</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span style='font-size:11.0pt;
+line-height:107%;font-family:"Courier New"'>this.<span style='background:#F7F7F7'>state
+</span>=<span style='background:#F7F7F7'> </span>{initialS<span
+style='background:#F7F7F7'>tudentNo</span>:<span style='background:#F7F7F7'> </span>this.<span
+style='background:#F7F7F7'>props</span>.<span style='background:#F7F7F7'>studentNo</span>};</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span style='font-size:11.0pt;
+line-height:107%;font-family:"Courier New"'>}</span></p>
+
+<p class=MsoNormal>As stated in the React documentation the constructor for a
+React component is called before it is mounted. When implementing the
+constructor for a React component subclass, you should call <span
+style='font-family:"Courier New"'>super(props)</span> before any other
+statement. Otherwise, <span style='font-family:"Courier New"'>this.props</span>
+will be undefined in the constructor, which can lead to bugs.</p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>ComponentWillMount </span>is
+now considered a legacy method by react and is unsafe so will not be discussed
+in this tutorial.</p>
+
+<p class=MsoNormal>The <span style='font-family:"Courier New"'>render()</span>
+function should be pure, meaning that it does not modify component state, it
+returns the same result each time it’s invoked, and it does not directly
+interact with the browser. It is the only required method in a class component.
+When called, it should examine this.props and this.state and return one of the
+following types:React elements, Arrays and fragments and strings and numbers which
+is what we have actually been doing in the past tutorials.</p>
+
+<p class=MsoNormal>According to React documentation componentDidMount() is
+invoked immediately after a component is mounted (inserted into the tree).
+Initialization that requires DOM nodes should go here. If you need to load data
+from a remote endpoint, this is a good place to instantiate the network
+request. You may call setState() immediately in componentDidMount(). It will
+trigger an extra rendering, but it will happen before the browser updates the
+screen. This guarantees that even though the render() will be called twice in
+this case, the user won’t see the intermediate state. Here’s an example to illustrate
+this</p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;font-family:
+"Courier New"'>componentDidMount(){</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;font-family:
+"Courier New"'> fetch('API_URL').then((result) =&gt; {</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;font-family:
+"Courier New"'>    // This will cause re-render,</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;font-family:
+"Courier New"'>    // As fetch is asyncronous and state is set after request
+completes.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;font-family:
+"Courier New"'>    this.setState({ API_Data: result.data});</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;font-family:
+"Courier New"'>  })</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;font-family:
+"Courier New"'>}</span></p>
+
+<h2>&nbsp;</h2>
+
+<h2>Updating</h2>
+
+<p class=MsoNormal>If you go online and check around some old component lifecycle
+tutorial you may see methods like componentWillUpdate() and componentWillReceiveProps()
+disregard these methods as they are no longer popularly used in react and
+deemed as unsafe. The two we will talk about are shouldComponentUpdate() and
+componentDidUpdate().</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>shouldComponentUpdate:</p>
+
+<p class=MsoNormal>This method should return the boolean value true or false. It
+is called before the component re-renders after receiving a new set of props or
+there’s a new state. We can see that it receives two arguments, the next props,
+and the next state. Without this method React will originally re-render when a
+new set of props is received or state is changed but we can set more conditions
+to be required before there is a re-render this will optimize you web-app if
+done right.</p>
+
+<p class=MsoNormal>Here is an example to illustrate</p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Courier New"'>    class </span><span style='font-size:11.0pt;line-height:107%;
+font-family:"Courier New";background:#F7F7F7'>LifeCycle</span><span
+style='font-size:11.0pt;line-height:107%;font-family:"Courier New"'>Example</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Courier New"'> extends
+React.Component {</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Courier New"'>      shouldComponentUpdate(nextProps, nextState) {</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Courier New"'>        if (this.state.studentNo == nextState.studentNo) {</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Courier New"'>          return false;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Courier New"'>        }</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Courier New"'>      }</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Courier New"'>    }</span></p>
+
+<p class=MsoNormal>In this case the component will not update if student number
+has not been changed.</p>
+
+<p class=MsoNormal>componentDidUpdate():</p>
+
+<p class=MsoNormal>This method is invoked immediately after updating occurs.
+This method is not called for the initial render. It receives two arguments,
+the props and state of the component before the update occurred. This is also a
+good place to do network requests as long as you compare the current props to
+previous props (e.g. a network request may not be necessary if the props have
+not changed).</p>
+
+<p class=MsoNormal>Example:</p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;font-family:
+"Courier New"'>componentDidUpdate(prevProps) {</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;font-family:
+"Courier New"'>  // Typical usage (don't forget to compare props):</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;font-family:
+"Courier New"'>  if (this.props.studentNo !== prevProps.studentNo) {</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;font-family:
+"Courier New"'>    this.fetchData(this.props.studentNo);</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;font-family:
+"Courier New"'>  }</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;font-family:
+"Courier New"'>}</span></p>
+
+<p class=MsoNormal>Here data on a student number is fetched when there is a
+change in student number. One thing to keep note of is that it is not a good
+idea to change state here as it triggers a re-render.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2>Unmounting</h2>
+
+<p class=MsoNormal>componentWillUnmount:</p>
+
+<p class=MsoNormal>This method is invoked immediately before a component is
+unmounted and destroyed. Perform any necessary cleanup in this method, such as
+invalidating timers, canceling network requests, or cleaning up any
+subscriptions that were created in componentDidMount().</p>
+
+<p class=MsoNormal>Here is an example to illustrate this:</p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;font-family:
+"Courier New"'>     componentWillUnmount() {</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;font-family:
+"Courier New"'>          document.removeEventListener(&quot;toggle&quot;, exampleFunction);</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;font-family:
+"Courier New"'>      }</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;font-family:
+"Courier New"'>&nbsp;</span></p>
+
+<h2>Exercise:</h2>
+
+<p class=MsoNormal>Create a simple react app and implement all the lifecycle
+methods you have just been shown and you are only to console log a simple
+message showing you have entered that part of the lifecycle. For example </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>componentDidUpdate(prevProps,
+prevState) {</span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>     
+console.log('Component DID UPDATE!')</span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>   }</span></p>
+
+<p class=MsoNormal>Observe the order in which the logs come in to give you
+better idea of how the lifecycle works.</p>
+
+<p class=MsoNormal>Bonus: you may also head over to the reactjs main
+documentation and add the other lifecycle methods not discussed here.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
