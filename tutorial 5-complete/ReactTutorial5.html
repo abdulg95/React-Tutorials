@@ -1,0 +1,137 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:16.0pt;
+	font-family:"Arial",sans-serif;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#2F5496;
+	font-weight:normal;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+pre
+	{mso-style-link:"HTML Preformatted Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Calibri Light",sans-serif;
+	color:#2F5496;}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-link:"HTML Preformatted";
+	font-family:"Courier New";}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-CA link="#0563C1" vlink="#954F72">
+
+<div class=WordSection1>
+
+<h1>Learning React -  Tutorial 05(React and Ajax)</h1>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>So far, we have been inputting data manually into our state.
+This has been sufficient in past tutorials but sometimes you might want to populate
+your app with data from an external api. There are two main ways of doing this
+with react. The first one is using the in built fetch() function that comes
+with  react and the other is using the third party library recommended by react
+called axios.<span class=MsoHyperlink><a
+href="../%20https:/github.com/axios/axios"> https://github.com/axios/axios</a></span>
+. Axios is preferred over fetch because fetch has been known to have a few
+shortcomings. Axios is used to make http requests from node.js, XMLHttpRequests
+from browsers and it supports ES6 promises which are objects that represent the
+eventual completion or failure of an async request . The main feature that it
+has over fetch() is that it performs automatic transforms of JSON data. In
+fetch this is split into two where after making an actual request you still
+need the added step of calling a .json() method to process what is returned
+from the promise. Here is an example to illustrate what this looks like using
+both.</p>
+
+<p class=MsoNormal><span style='font-size:11.0pt;line-height:107%;font-family:
+"Courier New"'> fetch(exampleapiurl).then(response =&gt; response.json()).then(data
+=&gt; console.log(data)); </span></p>
+
+<p class=MsoNormal>In the case above the response is fetched from the url then
+passed to a json method before it is finally ready to be used.</p>
+
+<p class=MsoNormal>However using axios this would simply be</p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:11.0pt;font-family:"Courier New"'>axios.get(exampleapiurl).then(response
+=&gt; console.log(response));</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:11.0pt;font-family:"Courier New"'>&nbsp;</span></p>
+
+<p class=MsoNormal>It may still be preferred to use fetch for small projects,
+as simply eliminating the middle step is not enough grounds for installing an
+external library.</p>
+
+<p class=MsoNormal>Here’s a simple exercise to familiarize yourself with
+fetching data in the right place in the react component lifecycle. Open the
+move to the tutorial 5 solution folder and run <span style='font-family:"Courier New"'>npm
+install</span> then <span style='font-family:"Courier New"'>npm start</span>.
+This is a simple react app that fetches data of posts from a site using axios.
+Observe that the ajax request is made in componentDidMount() part of the
+lifecycle as recommended in the component lifecycle tutorial. Play around with
+returned data by slicing it or maybe formatting it into different blocks and
+make sure you have a firm grasp of what is going on with the code.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
